@@ -3,9 +3,9 @@ import './Header.scss';
 
 const Header = () => {
   return (
-    <div>
-      Header
-    </div>
+    <sectio className='welcome --center-all'>
+      <h1 className="--text-light">Welcome To Harry.com</h1>
+    </sectio>
   )
 }
 
