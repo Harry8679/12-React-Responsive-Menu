@@ -9,7 +9,7 @@ const Navbar = () => {
     return(
         <nav className="container navbar">
       <div className="logo">
-        <BsFillRocketTakeoffFill size={35} />
+        <BsFillRocketTakeoffFill size={35} color='#fff' />
         <p className="logo-text">
           Harry.<span>com</span>
         </p>
