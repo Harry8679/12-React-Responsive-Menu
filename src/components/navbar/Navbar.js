@@ -6,10 +6,14 @@ import { RiCloseLine } from "react-icons/ri";
 
 
 const Navbar = () => {
-    const [showMenu, setShowMenu] = useState(true);
+    const [showMenu, setShowMenu] = useState(false);
 
     const toogleMenu = () => {
         setShowMenu(!showMenu);
+    }
+
+    const hideMenu = () => {
+        setShowMenu(false);
     }
     return(
         <nav className="container navbar">
@@ -20,28 +24,27 @@ const Navbar = () => {
                 </p>
             </div>
             <menu>
-                <ul
-                className="nav-links">
-                <li>
+                <ul className="nav-links" id={showMenu ? 'mobile-nav-links' : 'hide-mobile-nav-links'}>
+                <li onClick={hideMenu}>
                     <a href="#">Home</a>
                 </li>
-                <li>
+                <li onClick={hideMenu}>
                     <a href="#">Features</a>
                 </li>
-                <li>
+                <li onClick={hideMenu}>
                     <a href="#">Download</a>
                 </li>
-                <li>
+                <li onClick={hideMenu}>
                     <a href="#">Subscribe</a>
                 </li>
-                <li className="nav-btn">
+                <li className="nav-btn" onClick={hideMenu}>
                     <a className="btn btn-orange" href="#">
                     Get Started
                     </a>
                 </li>
                 </ul>
             </menu>
-            <div className="menu-icons">
+            <div className="menu-icons" onClick={toogleMenu}>
                 {showMenu ? (
                     <RiCloseLine color='#fff' size={27} />
                 ) : (
